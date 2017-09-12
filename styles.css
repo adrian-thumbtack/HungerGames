@@ -17,9 +17,18 @@ input[type=text] {
 }
 
 select, option {
-	background-color:black;
-	outline-color:cyan;
-	color:white;
+	display: inline-block;
+	border-radius: 4px;
+	background-color: #f4511e;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 14px;
+	padding: 5px;
+	width: 50px;
+	transition: all 0s;
+	cursor: pointer;
+	margin: 5px;
 }
 
 #start, #names, #stats, #day, #corn, #deaths, #winner, #summary {
