@@ -59,7 +59,8 @@ var itemsToFind =
 "spiritual enlightenment in a Villanova brochure",
 "Lapras",
 "diamond pickaxe",
-"Stalin mustache"];
+"Stalin mustache",
+"bone-hurting juice"];
 
 var causeAndEffect =
 ["fruit tree",
@@ -107,7 +108,23 @@ var causeAndEffect =
 "Agrawal star",
 "jealousy",
 "diamond pickaxe",
-"mines diamond ore"];
+"mines diamond ore",
+"bone-hurting juice",
+"has major bone pain after drinking bone-hurting juice",
+"Stalin mustache",
+"gulag",
+"one spaghetti",
+"eats a singular spaghetti",
+"50% off coupon to an SAT prep class",
+"attends an SAT class for half the price",
+"indescribable object",
+"object",
+"chocolate-covered cotton",
+"gets indigestion from too much Egyptian cotton",
+"stick of Old Spice deodorant",
+"smells good, but it\'s Old Spice, not your boy\'s cologne"
+"freeze ray",
+"freezes"];
 
 var killCauseAndEffect =
 ["landmine",
@@ -129,16 +146,16 @@ var killCauseAndEffect =
 "frisbee",
 "decapitates",
 "tank",
-"murders",
-"Stalin mustache",
-"gulag"];
+"murders"];
 
 var shelter =
 ["cave",
 "tree",
 "cardboard box",
 "geometrically stable truss",
-"House of the Seven Gables"];
+"House of the Seven Gables",
+"horse carcass",
+"igloo"];
 
 var cornucopia =
 ["run",
@@ -163,7 +180,15 @@ var sponsor =
 "VIP ticket to Tana Mojo concert",
 "Agrawal star",
 "Lapras",
-"diamond pickaxe"];
+"diamond pickaxe",
+"Stalin mustache",
+"bone-hurting juice",
+"one spaghetti",
+"50% off coupon to an SAT prep class",
+"indescribable object",
+"chocolate-covered cotton",
+"stick of Old Spice deodorant",
+"freeze ray"];
 
 var misc =
 ["wanders around",
@@ -206,7 +231,22 @@ var injury =
 "gets osteoporosis",
 "gets crippling depression",
 "tries to break the fourth wall",
-"prank calls"];
+"prank calls",
+"sees things twice",
+"sees things once",
+"reads a disheartening message in Comic Sans",
+"slips and slides on a banana peel",
+"gets Hodgkin\'s Lymphoma",
+"gets a bladder infection",
+"gets their fingernails removed by a native tribe",
+"gets devastating hiccups",
+"gets yellow fever",
+"gets forced into BEES",
+"gets roasted by Pannapara. Slam!",
+"unluckily trips despite the 1/100 chance",
+"gets an ulcer",
+"develops stage 4 brain cancer",
+"gets necrosis"];
 
 var injEffect =
 ["bow",
@@ -241,14 +281,31 @@ var variousDeaths =
 "uses dank memes to kill",
 "navy seals",
 "unsafe dating",
-"gets hit by a hurricane"];
+"gets hit by a hurricane",
+"falls through a portal into the blender dimension",
+"loses circulation looking too good in those tight shorts",
+"loses circulation looking too tight in those good shorts",
+"gender",
+"fell into the void",
+"was slain by a zombie pigman",
+"withered away",
+"stream",
+"fatally roundhouse kicks",
+"receives a bad Bishan test and dies",
+"dies after a botched birthmark removal surgery",
+"curses on a Christian server and gets smote",
+"spontaneously combusts",
+"lost connection to the server",
+"is killed with their biological mother\'s coat hanger",
+"falls in a well"];
 
 var doubleDeath =
 ["strangles",
 "forgets to get the AED for",
 "gets nuked from orbit by",
 "gets memed to death by",
-"uses dank memes to kill"];
+"uses dank memes to kill",
+"fatally roundhouse kicks"];
 
 var options =
 ["weapons",
