@@ -20,7 +20,18 @@ var melee =
 "shoe",
 "dead platypus",
 "65",
-"diamond sword"];
+"diamond sword",
+"dual swords",
+"TI-Nspire",
+"folding chair",
+"steam controller",
+"pear",
+"war axe",
+"greatsword",
+"Victorian broadsword",
+"shortsword",
+"mace",
+"bottle of vodka"];
 
 var itemsToFind =
 ["fruit tree",
@@ -260,3 +271,5 @@ var itemsThatGivePoints = [
 "clean water",
 "glasses that cure color-blindness",
 "anthology of life-changing poems"];
+
+var vowels = ["a","e","i","o","u"];
