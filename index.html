@@ -2,15 +2,17 @@
 <html>
 <head>
 <title>Hunger Games Simulator</title>
-<link rel="shortcut icon" href="icon.png">
+<link rel="shortcut icon" href="https://lc-www-live-s.legocdn.com/media/nxtlog/b956b340-2058-4da3-923c-57802f93e07a/440x330/HungerGames_Updated_CC.jpg">
 <link type="text/css" rel="stylesheet" href="styles.css">
 <script type="text/javascript" src="items.js"></script>
 </head>
 <body>
+<div id="background">
+</div>
 <div id="start">
 	<div id="hungergames" class="header">
-	<h1>The Hunger Games</h1>
-	<p class="credits">Code by Adrian Thamburaj, design by Eric Zheng</p>
+	<h1 class="title">The Hunger Games</h1>
+	<button id="button" type="button" class="button"><span>Confirm</span></button>
 </div>
 	<div style="height: 10%;"></div>
 	<div style="width: 60%; float: left;">
@@ -24,47 +26,44 @@
 		</label>
 		<br>
 		<br>
-		<button id="button" type="button" class="button"><span>Confirm</span></button>
+		<div class="credits"><p>Code by Adrian Thamburaj, design by Eric Zheng</p></div>
 	</div>
 </div>
 <div id="names">
-<div id="reaping" class="header"><h1>The Reaping</h1><p class="credits">Code by Adrian Thamburaj, design by Eric Zheng</p></div>
-<button id="confirmNames" type="button" class="button"><span>Confirm Names</span></button>
+<div id="reaping" class="header">
+	<h1 class="title">The Reaping</h1>
+	<button id="confirmNames" type="button" class="button"><span>Confirm Names</span></button>	
+	</div>
 </div>
 
 <div id="stats">
-<div class="header"><h1>The Tributes</h1><p class="credits">Code by Adrian Thamburaj, design by Eric Zheng</p></div>
-<button id="proceedOne" type="button" class="button"><span>Proceed</span></button>
+<div class="header"><h1 class="title">The Tributes</h1><button id="proceedOne" type="button" class="button"><span>Proceed</span></button></div>
 </div>
 
 <div id="day">
-<div class="header"><h1 id="dayNum">Day </h1></div>
-<button id="proceedTwo" type="button" class="button"><span>Proceed</span></button>
+<div class="header"><h1 id="dayNum" class="title">Day </h1><button id="proceedTwo" type="button" class="button"><span>Proceed</span></button></div>
 </div>
 
 <div id="corn">
-<div class="header"><h1>The Bloodbath</h1></div>
-<button id = "proceedThree" type="button" class="button"><span>Proceed</span></button>
+<div class="header"><h1 class="title">The Bloodbath</h1><button id = "proceedThree" type="button" class="button"><span>Proceed</span></button></div>
 </div>
 
 <div id="deaths">
-<div class="header"><h1>Honor the Fallen</h1></div>
+<div class="header"><h1 class="title">Honor the Fallen</h1><button id="proceedFour" type="button" class="button"><span>Proceed</span></button></div>
 <h2 id="cannon"> cannon shots can be heard in the distance</h2>
 <h2>The following tributes have fallen:</h2>
-<button id="proceedFour" type="button" class="button"><span>Proceed</span></button>
 </div>
 
 <div id="winner">
-<div class="header"><h1>The Champion</h1></div>
+<div class="header"><h1 class="title">The Champion</h1><button id="proceedFive" type="button" class="button"><span>Proceed</span></button></div>
 <h2 id="declare"></h2>
 <h2 id="champKills"></h2>
-<button id="proceedFive" type="button" class="button"><span>Proceed</span></button>
 </div>
 
 <div id="summary">
 <div class="header"><h1>A Recap of The Hunger Games</h1></div>
-<button id="restart" type="button" class="button"><span>New Hunger Games</span></button>
-<button id="same" type="button" class="button"><span>Quarter Quell! Same Tributes Again!</span></button>
+<button id="restart" type="button" class="buttonTwo"><span>New Hunger Games</span></button>
+<button id="same" type="button" class="buttonTwo"><span>Quarter Quell! Same Tributes Again!</span></button>
 </div>
 
 <script>
@@ -100,6 +99,7 @@
 	var health = [];
 
 	var onClick = function(){
+		names.style.visibility = "visible";
 		mult = wow.checked;
 		num = document.getElementById("wow").value;
 		first.style.visibility = "hidden";
@@ -127,7 +127,8 @@
 			temp.appendChild(wowselect);
 			temp.appendChild(document.createElement("br"));
 			temp.appendChild(document.createElement("br"));
-			names.insertBefore(temp, names.children[names.children.length-1]);
+			//names.insertBefore(temp, names.children[names.children.length-1]);
+			names.appendChild(temp);
 		}
 	};
 
@@ -176,6 +177,7 @@
 			stats.appendChild(temp);
 		}
 		names.style.visibility = "hidden";
+		stats.style.visibility = "visible";
 	}
 
 	function deadHighlight(){
@@ -234,7 +236,7 @@
 		}
 
 		temp.appendChild(p);
-		deaths.insertBefore(temp, deaths.children[deaths.childElementCount-1]);
+		deaths.appendChild(temp);
 		corn.style.visibility = "hidden";
 		day.style.visibility = "hidden";
 		deaths.style.visibility = "visible";
@@ -253,7 +255,7 @@
 			}
 			wowhp[i].textContent = health[i] + " HP";
 		}
-		deaths.removeChild(deaths.children[deaths.childElementCount-2]);
+		deaths.removeChild(deaths.children[deaths.childElementCount-1]);
 		deaths.style.visibility = "hidden";
 		stats.style.visibility = "visible";
 	}
@@ -767,7 +769,7 @@
 		}
 
 		temp.appendChild(par);
-		day.insertBefore(temp, day.children[day.childElementCount-1]);
+		day.appendChild(temp);
 		day.style.visibility = "visible";
 		stats.style.visibility = "hidden";
 	}
@@ -805,16 +807,24 @@
 					break;
 				case "supply":
 					var z = rand(inum);
-					fates.push(allNames[r] + " finds " + itemsToFind[z] + " in the Cornucopia.");
+					var article = "a";
+					if (vowels.indexOf(itemsToFind[z].charAt(0)) != -1){
+						article += "n";
+					}
+					fates.push(allNames[r] + " finds " + article + " " + itemsToFind[z] + " in the Cornucopia.");
 					playerItems[r].push(itemsToFind[z]);
 					break;
 				case "weapon":
 					var z = rand(wnum);
-					fates.push(allNames[r] + " finds " + weapons[z] + " in the Cornucopia.");
+					var article = "a";
+					if (vowels.indexOf(weapons[z].charAt(0)) != -1){
+						article += "n";
+					}
+					fates.push(allNames[r] + " finds " + article + " " + weapons[z] + " in the Cornucopia.");
 					playerItems[r].push(weapons[z]);
 					if (fates[fates.length-1].indexOf("melee") > 0){
 						z = rand(mnum);
-						fates[fates.length-1] = allNames[r] + " finds " + melee[z] + " in the Cornucopia.";
+						fates[fates.length-1] = allNames[r] + " finds a " + melee[z] + " in the Cornucopia.";
 						playerItems[r][playerItems[r].length-1] = melee[z];
 					}
 					break;
@@ -824,17 +834,7 @@
 						break;
 					}
 					else {
-						var q = rand(allNames.length);
-						if (done[q]){
-							while (done[q]){
-								if (q === allNames.length-1){
-									q = 0;
-								}
-								else {
-									q++;
-								}
-							}
-						}
+						var q = liveChampion(r);
 						var enemy = allNames[q];
 						var fate = rand(4);
 						var ult = allNames[r] + " battles " + enemy + ". ";
@@ -843,20 +843,16 @@
 						}
 						else if (fate === 1){
 							ult += allNames[r] + " defeats and kills " + enemy + ".";
-							deathBools[q] = false;
+							xKillsY(r,q);
 							summary.push(ult);
-							kills[r]++;
-							numDeaths++;
 						}
 						else if (fate === 2){
 							ult += enemy + " defeats " + allNames[r] + ", but decides to spare " + proPos[r] + " life.";
 						}
 						else if (fate === 3){
 							ult += enemy + " defeats and kills " + allNames[r] + ".";
-							deathBools[r] = false;
+							xKillsY(q,r);
 							summary.push(ult);
-							kills[q]++;
-							numDeaths++;
 						}
 						done[q] = true;
 						notDone--;
@@ -875,8 +871,9 @@
 		}
 
 		temp.appendChild(p);
-		corn.insertBefore(temp, corn.children[corn.childElementCount-1]);
+		corn.appendChild(temp);
 		stats.style.visibility = "hidden";
+		corn.style.visibility = "visible";
 	}
 
 	function rand(x){
@@ -940,7 +937,7 @@
 	}
 
 	function dayClear(){
-		day.removeChild(day.children[day.childElementCount-2]);
+		day.removeChild(day.children[day.childElementCount-1]);
 	}
 
 	function declareWinner(){
@@ -1002,7 +999,7 @@
 		console.log(allNames);
 
 		for (var i=0; i<num; i++){
-			names.removeChild(names.children[names.childElementCount-2]);
+			names.removeChild(names.children[names.childElementCount-1]);
 		}
 
 		first.style.visibility = "visible";
@@ -1021,19 +1018,18 @@
 	}
 
 	function visibleStuff(){
-		stats.style.visibility = "visible";
+		//stats.style.visibility = "visible";
 		names.style.visibility = "visible";
-		corn.style.visibility = "visible";
-		day.style.visibility = "visible";
-		cannon.style.visibility = "visible";
+		//corn.style.visibility = "visible";
+		//day.style.visibility = "visible";
+		//cannon.style.visibility = "visible";
 		winner.style.visibility = "hidden";
 		finalSum.style.visibility = "hidden";
 
 		for (var i=0; i<num; i++){
 			stats.removeChild(stats.children[stats.childElementCount-1]);
 		}
-
-		corn.removeChild(corn.children[corn.childElementCount-2]);
+		corn.removeChild(corn.children[corn.childElementCount-1]);
 
 		finalSum.removeChild(finalSum.children[finalSum.childElementCount-3]);
 		summary = [];
