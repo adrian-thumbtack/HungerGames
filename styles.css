@@ -28,65 +28,35 @@ select, option {
 	-moz-background-size:cover;
 	background-size:cover;
 	color:white;
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	text-align:center;
 }
 
 #start {
-	width:100%;
-	height:100%;
-	position:absolute;
-	top:0;
-	left:0;
 	z-index:5;
-	text-align:center;
 }
 
 #names {
-	width:100%;
-	height:100%;
-	position:absolute;
-	top:0;
-	left:0;
 	z-index:4;
-	text-align:center;
 }
 
 #stats {
-	width:100%;
-	height:100%;
-	position:absolute;
-	top:0;
-	left:0;
-	text-align:center;
 	z-index:3;
 }
 
 #day {
-	width:100%;
-	height:100%;
-	position:absolute;
-	top:0;
-	left:0;
-	text-align:center;
 	z-index:1;
 }
 
 #corn {
-	width:100%;
-	height:100%;
-	position:absolute;
-	top:0;
-	left:0;
-	text-align:center;
 	z-index:2;
 }
 
 #deaths, #winner, #summary {
-	width:100%;
-	height:100%;
-	position:absolute;
-	top:0;
-	left:0;
-	text-align:center;
 	z-index:0;
 	visibility:hidden;
 }
@@ -97,7 +67,6 @@ select, option {
 
 .credits {
 	text-align:right;
-	margin-right:1%;
 }
 
 .header {
