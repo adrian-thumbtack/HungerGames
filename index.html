@@ -1039,13 +1039,12 @@
 		}
 		var h = document.createElement("h3");
 		h.appendChild(document.createTextNode(allNames[deathBools.indexOf(true)] + " is the champion!"));
-if ( kills[deathBools.indexOf(true)] === 0){
-	h.appendChild(document.createTextNode("Achievement Get: Pacifist Run!"));
-}
-if ( kills[deathBools.indexOf(true)] >= Math.sqrt(deathBools.length)){
-	h.appendChild(document.createTextNode("Achievement Get: Serial Killer!"));
-}
-if (
+		if ( kills[deathBools.indexOf(true)] === 0){
+			h.appendChild(document.createTextNode("Achievement Get: Pacifist Run!"));
+		}
+		if ( kills[deathBools.indexOf(true)] >= Math.sqrt(deathBools.length)){
+			h.appendChild(document.createTextNode("Achievement Get: Serial Killer!"));
+		}
 		temp.appendChild(p);
 		temp.appendChild(h);
 		finalSum.insertBefore(temp, finalSum.children[finalSum.childElementCount-2]);
