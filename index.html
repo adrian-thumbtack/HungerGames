@@ -379,7 +379,7 @@
 									fates.push(allNames[r] + " almost whacks " + allNames[q] + " to death with a " + aMelee + ".");
 								}
 							}
-							else if (b === "random mine" || fate === 0){
+								if (b === "random mine" || fate === 0){
 								if (b === "random mine"){
 									var c = rand(2);
 									if (c === 0){
@@ -467,12 +467,52 @@
 							xDies(r);
 							summary.push(fates[fates.length-1]);
 						}
+						else if (a === "indescribable object"){
+							var temp = rand(3);
+							if (temp === 0){
+								fates.push(allNames[r] + "\'s indescribable object explodes in a shower of glorious communism, killing " + pro[r] + ".");
+								xDies(r);
+								summary.push(fates[fates.length-1]);
+							}
+							else if (temp === 1){
+								fates.push(allNames[r] + " throws " + proPos[r] + " indescribable object, which quickly disintegrates " + allNames[q] + ".");
+								xKillsY(r,q);
+								done[q] = true;
+								summary.push(fates[fates.length-1]);
+							}
+							else {
+								fates.push(allNames[r] + "\'s indescribable object sits there uselessly, so " + allNames[r] + " pollutes the ocean with it.");
+							}
+						}
+						else if (a === "chocolate-covered cotton"){
+							injureOne(r);
+							if (!deathBools[r]){
+								fates.push(allNames[r] + " gets terminal constipation from chocolate-covered cotton and dies.");
+								xDies(r);
+								summary.push(fates[fates.length-1]);
+							}
+							else {
+								fates.push(allNames[r] + " gets indigestion from eating too much chocolate-covered cotton.");
+							}
+						}
 						else if (a === "Agrawal star"){
 							var q = liveChampion(r);
 							fates.push(allNames[r] + "\'s Agrawal star causes " + allNames[q] + " to die of jealousy.");
-							xKillsY(r,q);
 							done[q] = true;
 							summary.push(fates[fates.length-1]);
+							xKillsY(r,q);
+						}
+						else if (a === "freeze ray"){
+							var q = liveChampion(r);
+							injureTwo(r,q);
+							if (!deathBools[q]){
+								fates.push(allNames[q] + " contracts hypothermia after being shot by " + allNames[r] + "\'s freeze ray and freezes to death.");
+								done[q] = true;
+								summary.push(fates[fates.length-1]);
+							}
+							else {
+								fates.push(allNames[r] + " freezes " + allNames[q] + " with a freeze ray.");
+							}
 						}
 						else if (a === "Lapras"){
 							var q = liveChampion(r);
