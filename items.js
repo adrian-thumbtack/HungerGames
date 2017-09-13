@@ -136,7 +136,7 @@ var causeAndEffect =
 "chocolate-covered cotton",
 "gets indigestion from too much Egyptian cotton",
 "stick of Old Spice deodorant",
-"smells good, but it\'s Old Spice, not your boy\'s cologne"
+"smells good, but it\'s Old Spice, not your boy\'s cologne",
 "freeze ray",
 "freezes"];
 
