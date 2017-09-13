@@ -66,7 +66,8 @@ var itemsToFind =
 "indescribable object",
 "chocolate-covered cotton",
 "stick of Old Spice deodorant",
-"freeze ray"];
+"freeze ray",
+"findings"];
 
 var itemsThatGivePoints = [
 "fruit tree",
@@ -138,7 +139,11 @@ var causeAndEffect =
 "stick of Old Spice deodorant",
 "smells good, but it\'s Old Spice, not your boy\'s cologne",
 "freeze ray",
-"freezes"];
+"freezes",
+"email",
+"dies of shame after being kicked off the finance team",
+"findings",
+"becomes the most successful paleontologist from Vatican City"];
 
 var killCauseAndEffect =
 ["landmine",
@@ -169,7 +174,12 @@ var shelter =
 "geometrically stable truss",
 "House of the Seven Gables",
 "horse carcass",
-"igloo"];
+"igloo",
+"Olive Garden",
+"couch",
+"sleeping bag",
+"queen-sized bed with a memory foam mattress and furnished headrest",
+"brothel"];
 
 var cornucopia =
 ["run",
@@ -228,7 +238,29 @@ var misc =
 "hides from",
 "eats",
 "attaches a measuring tape to a toaster",
-"gains Disney Channel flo"];
+"gains Disney Channel flo",
+"sings opera",
+"blames Nelson",
+"becomes a literary artist",
+"complains about a test grade",
+"catches 22",
+"catches in the rye",
+"raises the mission requirement to 65",
+"tries to post a Vine",
+"logs",
+"changes genders",
+"email",
+"yells \"NikhilYA!\"",
+"finds Pepe",
+"finds Chuck Norris",
+"puts chemicals in the water to turn the frogs gay",
+"fights the Ender dragon",
+"watches WatchMojo for 3 hours",
+"joins the Society of Teen Suicide Prevention",
+"finds Bishan Agrawal",
+"barrel rolls",
+"finds Dory",
+"finds Nemo"];
 
 var injury =
 ["gets a cold",
@@ -311,7 +343,10 @@ var variousDeaths =
 "spontaneously combusts",
 "lost connection to the server",
 "is killed with their biological mother\'s coat hanger",
-"falls in a well"];
+"falls in a well",
+"dies in the Matrix",
+"succumbs to lethal peer pressure from",
+"accepts the Blue Whale challenge"];
 
 var doubleDeath =
 ["strangles",
@@ -319,7 +354,8 @@ var doubleDeath =
 "gets nuked from orbit by",
 "gets memed to death by",
 "uses dank memes to kill",
-"fatally roundhouse kicks"];
+"fatally roundhouse kicks",
+"succumbs to lethal peer pressure from"];
 
 var options =
 ["weapons",
