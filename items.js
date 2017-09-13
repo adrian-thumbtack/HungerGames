@@ -60,7 +60,21 @@ var itemsToFind =
 "Lapras",
 "diamond pickaxe",
 "Stalin mustache",
-"bone-hurting juice"];
+"bone-hurting juice",
+"one spaghetti",
+"50% off coupon to an SAT prep class",
+"indescribable object",
+"chocolate-covered cotton",
+"stick of Old Spice deodorant",
+"freeze ray"];
+
+var itemsThatGivePoints = [
+"fruit tree",
+"clean water",
+"glasses that cure color-blindness",
+"anthology of life-changing poems",
+"stick of Old Spice deodorant",
+"50% off coupon to an SAT prep class"];
 
 var causeAndEffect =
 ["fruit tree",
@@ -322,11 +336,5 @@ var options =
 "use",
 "injury",
 "use"];
-
-var itemsThatGivePoints = [
-"fruit tree",
-"clean water",
-"glasses that cure color-blindness",
-"anthology of life-changing poems"];
 
 var vowels = ["a","e","i","o","u"];
