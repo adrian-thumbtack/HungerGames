@@ -350,10 +350,11 @@
 					}
 					else {
 						var a = playerItems[r][0];
+						var b;
 						if (itemsThatGivePoints.indexOf(a) != -1){
 							pleaseHeal(r);
 						}
-						var aMelee, b;
+						var aMelee;
 						if (weapons.indexOf(a) != -1 || melee.indexOf(a) != -1){
 							if (melee.indexOf(a) != -1){
 								aMelee = a;
@@ -462,8 +463,14 @@
 								}
 							}
 						}
+						b = causeAndEffect[causeAndEffect.indexOf(a)+1];
 						else if (a === "House of the Seven Gables"){
 							fates.push("The roof falls on " + allNames[r] + ".");
+							xDies(r);
+							summary.push(fates[fates.length-1]);
+						}
+						else if (a === "email"){
+							fates.push(allNames[r] + " " + b + ".");
 							xDies(r);
 							summary.push(fates[fates.length-1]);
 						}
@@ -593,7 +600,6 @@
 					}
 					break;
 				case "misc":
-					console.log("misc");
 					var a = misc[rand(minum)];
 					var q = liveChampion(r);
 					if (a === "cries"){
@@ -627,6 +633,24 @@
 					}
 					else if (a === "drops a rant against"){
 						fates.push(allNames[r] + " drops a rant about " + allNames[q] + ".");
+					}
+					else if (a === "logs"){
+						fates.push(allNames[r] + " places " + proPos[r] + " head between two inconspicuous suspended logs.");
+					}
+					else if (a === "changes genders"){
+						fates.push(allNames[r] + " " + a + ".");
+						if (pro[r] === "him"){
+							pro[r] = "her";
+							proPos[r] = "her";
+						}
+						else {
+							pro[r] = "him";
+							proPos[r] = "his";
+						}
+					}
+					else if (a === "email"){
+						fates.push(allNames[r] + " angrily emails finance club about not being on the A team.");
+						playerItems[r].push("email");
 					}
 					else {
 						fates.push(allNames[r] + " " + a + ".");
@@ -777,7 +801,7 @@
 						}
 					}
 					else if (doubleDeath.indexOf(a) != -1){
-						if (a === "gets nuked from orbit by" || a === "gets memed to death by"){
+						if (a === "gets nuked from orbit by" || a === "gets memed to death by" || a === "succumbs to lethal peer pressure from"){
 							fates.push(allNames[q] + " " + a + " " + allNames[r] + ".");
 						}
 						else {
