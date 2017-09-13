@@ -92,6 +92,7 @@ select, option {
 
 #hungergames {
 	width:100%;
+	position:fixed;
 }
 
 .credits {
