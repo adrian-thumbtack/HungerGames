@@ -102,13 +102,13 @@ select, option {
 }
 
 .header {
-	position:fixed;
+	position: fixed;
 	text-align: center;
 	font-family: arial;
 	background-color: #f4511e;
 	color: white;
 	padding:15px;
-	width: 200%;
+	width: 100%;
 	box-shadow: 0px 5px 20px #3a3a3a;
 }
 
