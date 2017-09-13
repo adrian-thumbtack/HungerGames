@@ -283,6 +283,10 @@
 				}
 			}
 
+			var isAWinner = declareWinnerAgain();
+			if (isAWinner){
+				break;
+			}
 			done[r] = true;
 
 			switch (options[rand(options.length)]){
@@ -1003,6 +1007,21 @@
 		day.removeChild(day.children[day.childElementCount-1]);
 	}
 
+	function declareWinnerAgain(){
+		var count = 0;
+		
+		for (var i=0; i<deathBools.length; i++){
+			if (deathBools[i]){
+				count++;
+			}
+		}
+		
+		if (count === 1){
+			return true;
+		}
+		return false;
+	}
+	
 	function declareWinner(){
 		var count = 0;
 
