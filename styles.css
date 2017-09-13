@@ -102,7 +102,6 @@ select, option {
 }
 
 .header {
-	position: fixed;
 	text-align: center;
 	font-family: arial;
 	background-color: #f4511e;
