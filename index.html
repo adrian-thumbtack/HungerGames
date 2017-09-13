@@ -463,13 +463,13 @@
 								}
 							}
 						}
-						b = causeAndEffect[causeAndEffect.indexOf(a)+1];
 						else if (a === "House of the Seven Gables"){
 							fates.push("The roof falls on " + allNames[r] + ".");
 							xDies(r);
 							summary.push(fates[fates.length-1]);
 						}
 						else if (a === "email"){
+							b = causeAndEffect[causeAndEffect.indexOf(a)+1];
 							fates.push(allNames[r] + " " + b + ".");
 							xDies(r);
 							summary.push(fates[fates.length-1]);
@@ -1099,7 +1099,7 @@
 	}
 
 	press.addEventListener("click",onClick);
-	document.getElementById("confirmNames").addEventListener("click",registerNames);
+	document.getElementById("confirmNames").addEventListener("click",registerNames;
 	document.getElementById("proceedOne").addEventListener("click", proceedToDay);
 	document.getElementById("proceedTwo").addEventListener("click", toDeaths);
 	document.getElementById("proceedThree").addEventListener("click",toDeaths);
