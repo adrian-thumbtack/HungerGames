@@ -331,7 +331,6 @@ var variousDeaths =
 "falls through a portal into the blender dimension",
 "loses circulation looking too good in those tight shorts",
 "loses circulation looking too tight in those good shorts",
-"gender",
 "fell into the void",
 "was slain by a zombie pigman",
 "withered away",
