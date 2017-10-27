@@ -595,8 +595,8 @@
 							else if (y === "safe dating"){
 								var q = liveChampion(r);
 								fates.push(allNames[r] + " and " + allNames[q] + " practice safe dating.");
-								health[r] = 0;
-								health[q] = 0;
+								health[r]++;
+								health[q]++;
 							}
 							else {
 								fates.push(allNames[r] + " " + y + ".");
