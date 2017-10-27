@@ -267,7 +267,8 @@
 					healthmsg = "Supercharged";
 					break;
 				default:
-					healthmsg = "H4XX0R";
+					if(health[i] < 0) healthmsg = "Very Deceased (This is a bug, please tell us if you see this)";
+					else: healthmsg = "Superdupercharged";
 			}
 			wowhp[i].textContent = healthmsg;
 		}
