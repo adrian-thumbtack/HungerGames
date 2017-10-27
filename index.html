@@ -423,7 +423,7 @@
 									}
 									else {
 										fates.push(allNames[r] + " accidentally steps on " + proPos[r] + " own landmine.");
-										deathBools[r] = false;
+										xDies(r);
 									}
 								}
 								else if (a === "frisbee"){
@@ -1077,7 +1077,7 @@
 		if ( health[deathBools.indexOf(true)] > 2){
 			ach.appendChild(document.createTextNode("\nAchievement Get: Overdose!"));
 		}
-		if ( playerItems[deathBools.indexOf(true)].length() > 4){
+		if ( playerItems[deathBools.indexOf(true)].length > 4){
 			ach.appendChild(document.createTextNode("\nAchievement Get: Hoarder!"));
 		}
 		temp.appendChild(p);
