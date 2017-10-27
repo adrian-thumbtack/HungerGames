@@ -268,7 +268,7 @@
 					break;
 				default:
 					if(health[i] < 0) healthmsg = "Very Deceased (This is a bug, please tell us if you see this)";
-					else healthmsg = "Superdupercharged";
+					else: healthmsg = "Superdupercharged";
 			}
 			wowhp[i].textContent = healthmsg;
 		}
@@ -1066,15 +1066,23 @@
 			p.appendChild(document.createElement("br"));
 		}
 		var h = document.createElement("h3");
+		var ach = document.createElement("h3");
 		h.appendChild(document.createTextNode(allNames[deathBools.indexOf(true)] + " is the champion!"));
 		if ( kills[deathBools.indexOf(true)] === 0){
-			h.appendChild(document.createTextNode("\nAchievement Get: Pacifist Run!"));
+			ach.appendChild(document.createTextNode("\nAchievement Get: Pacifist Run!"));
 		}
 		if ( kills[deathBools.indexOf(true)] >= Math.sqrt(deathBools.length)){
-			h.appendChild(document.createTextNode("\nAchievement Get: Serial Killer!"));
+			ach.appendChild(document.createTextNode("\nAchievement Get: Serial Killer!"));
+		}
+		if ( health[deathBools.indexOf(true)] > 2){
+			ach.appendChild(document.createTextNode("\nAchievement Get: Overdose!"));
+		}
+		if ( playerItems[deathBools.indexOf(true)].length() > 4){
+			ach.appendChild(document.createTextNode("\nAchievement Get: Hoarder!"));
 		}
 		temp.appendChild(p);
 		temp.appendChild(h);
+		temp.appendChild(ach);
 		finalSum.insertBefore(temp, finalSum.children[finalSum.childElementCount-2]);
 
 		finalSum.style.visibility = "visible";
