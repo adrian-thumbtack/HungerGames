@@ -1066,7 +1066,7 @@
 			p.appendChild(document.createElement("br"));
 		}
 		var h = document.createElement("h3");
-		var ach = document.createElement("h3");
+		var ach = document.createElement("p");
 		h.appendChild(document.createTextNode(allNames[deathBools.indexOf(true)] + " is the champion!"));
 		if ( kills[deathBools.indexOf(true)] === 0){
 			ach.appendChild(document.createTextNode("\nAchievement Get: Pacifist Run!"));
@@ -1080,6 +1080,8 @@
 		if ( playerItems[deathBools.indexOf(true)].length > 4){
 			ach.appendChild(document.createTextNode("\nAchievement Get: Hoarder!"));
 		}
+		ach.style.fontSize = "large";
+		ach.style.fontWeight = "bold";
 		ach.appendChild(document.createTextNode("\nAchievement Get: Tester!"));
 		temp.appendChild(p);
 		temp.appendChild(h);
