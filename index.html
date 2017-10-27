@@ -725,7 +725,6 @@
 					}
 					break;
 				case "heal":
-					console.log("heal");
 					if (health[r] === 1){
 						health[r]++;
 						fates.push(allNames[r] + " heals " + pro[r] + "self.");
@@ -734,15 +733,7 @@
 						done[r] = false;
 					}
 					else {
-						var q = rand(num);
-						while (health[q] >= 2){
-							if (q === num-1){
-								q = 0;
-							}
-							else {
-								q++;
-							}
-						}
+						liveChampion(r);
 						health[q] = 2;
 						fates.push(allNames[r] + " heals " + allNames[q] + ".");
 					}
