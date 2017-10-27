@@ -268,8 +268,8 @@
 					break;
 				default:
 					healthmsg = "H4XX0R";
-			wowhp[i].textContent = healthmsg;
 			}
+			wowhp[i].textContent = healthmsg;
 		}
 		deaths.removeChild(deaths.children[deaths.childElementCount-1]);
 		deaths.style.visibility = "hidden";
@@ -733,7 +733,7 @@
 						done[r] = false;
 					}
 					else {
-						liveChampion(r);
+						q = liveChampion(r);
 						health[q] = 2;
 						fates.push(allNames[r] + " heals " + allNames[q] + ".");
 					}
