@@ -252,7 +252,23 @@
 			else {
 				wowkills[i].textContent = kills[i] + " Kills";
 			}
-			wowhp[i].textContent = health[i] + " HP";
+			var healthmsg = "";
+			switch(health[i]){
+				case 0: 
+					healthmsg = "Deceased";
+					break;
+				case 1: 
+					healthmsg = "Injured";
+					break;
+				case 2: 
+					healthmsg = "Healthy";
+					break;
+				case 3:
+					healthmsg = "Supercharged";
+					break;
+				default:
+					healthmsg = "H4XX0R";
+			wowhp[i].textContent = healthmsg;
 		}
 		deaths.removeChild(deaths.children[deaths.childElementCount-1]);
 		deaths.style.visibility = "hidden";
