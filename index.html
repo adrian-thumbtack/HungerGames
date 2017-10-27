@@ -1069,20 +1069,25 @@
 		var ach = document.createElement("p");
 		h.appendChild(document.createTextNode(allNames[deathBools.indexOf(true)] + " is the champion!"));
 		if ( kills[deathBools.indexOf(true)] === 0){
-			ach.appendChild(document.createTextNode("\nAchievement Get: Pacifist Run!"));
+			ach.appendChild(document.createElement("br"));
+			ach.appendChild(document.createTextNode("Achievement Get: Pacifist Run!"));
 		}
 		if ( kills[deathBools.indexOf(true)] >= Math.sqrt(deathBools.length)){
-			ach.appendChild(document.createTextNode("\nAchievement Get: Serial Killer!"));
+			ach.appendChild(document.createElement("br"));
+			ach.appendChild(document.createTextNode("Achievement Get: Serial Killer!"));
 		}
 		if ( health[deathBools.indexOf(true)] > 2){
-			ach.appendChild(document.createTextNode("\nAchievement Get: Overdose!"));
+			ach.appendChild(document.createElement("br"));
+			ach.appendChild(document.createTextNode("Achievement Get: Overdose!"));
 		}
 		if ( playerItems[deathBools.indexOf(true)].length > 4){
-			ach.appendChild(document.createTextNode("\nAchievement Get: Hoarder!"));
+			ach.appendChild(document.createElement("br"));
+			ach.appendChild(document.createTextNode("Achievement Get: Hoarder!"));
 		}
 		ach.style.fontSize = "large";
 		ach.style.fontWeight = "bold";
-		ach.appendChild(document.createTextNode("\nAchievement Get: Tester!"));
+		ach.appendChild(document.createElement("br"));
+		ach.appendChild(document.createTextNode("Achievement Get: Tester!"));
 		temp.appendChild(p);
 		temp.appendChild(h);
 		temp.appendChild(ach);
