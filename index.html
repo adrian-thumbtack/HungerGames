@@ -101,6 +101,10 @@
 		names.style.visibility = "visible";
 		mult = wow.checked;
 		num = document.getElementById("wow").value;
+		if((num < 2) || (num > 65)) {
+			alert("You really want "+num+" participants?");
+			return;
+		}
 		first.style.visibility = "hidden";
 		pressed = false;
 
