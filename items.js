@@ -292,7 +292,8 @@ var injury =
 "unluckily trips despite the 1/100 chance",
 "gets an ulcer",
 "develops stage 4 brain cancer",
-"gets necrosis"];
+"gets necrosis",
+"gets forced into fall mentorship"];
 
 var injEffect =
 ["bow",
