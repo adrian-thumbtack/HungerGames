@@ -341,7 +341,7 @@ var variousDeaths =
 "curses on a Christian server and gets smote",
 "spontaneously combusts",
 "lost connection to the server",
-"is killed with their biological mother\'s coat hanger",
+"coat hanger",
 "falls in a well",
 "dies in the Matrix",
 "succumbs to lethal peer pressure from",
