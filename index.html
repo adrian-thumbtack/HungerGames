@@ -362,7 +362,12 @@
 						if (f === 'a' || f === 'e' || f === 'i' || f === 'o'){
 							article += "n";
 						}
-						fates.push(allNames[r] + " receives " + article + " " + sponsor[q] + " from a sponsor");
+						if (sponsor[q] === "one spaghetti"){
+							fates.push(allNames[r] + " receives a singular spaghetti from a sponsor");	
+						}
+						else {
+							fates.push(allNames[r] + " receives " + article + " " + sponsor[q] + " from a sponsor");
+						}
 						playerItems[r].push(sponsor[q]);
 						if (sponsor[q] === "empty box"){
 							fates[fates.length-1] += ", because apparently the sponsor is a dick.";
