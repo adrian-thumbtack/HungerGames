@@ -744,7 +744,8 @@
 					}
 					break;
 				case "death":
-					var a = variousDeaths[rand(variousDeaths.length)];
+					var a = 
+					    [rand(variousDeaths.length)];
 					var q = liveChampion(r);
 					if (a === "breaks"){
 						fates.push(allNames[r] + " " + a + " " + allNames[q] + "\'s neck.");
@@ -788,6 +789,11 @@
 						}
 						done[q] = true;
 						xKillsY(r,q);
+					}
+					else if (a === "coat hanger"){
+						fates.push(allNames[r] + " gets beat to death by " + proPos[r] + " mother\'s coat hanger.");
+						xDies(r);
+						summary.push(fates[fates.length-1]);
 					}
 					else if (a === "unsafe dating"){
 						var lol = playerItems[r].indexOf("pack of condoms");
