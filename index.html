@@ -753,6 +753,8 @@
 					break;
 				case "death":
 					var a = variousDeaths[rand(variousDeaths.length)];
+					console.log("death");
+					console.log(a);
 					var q = liveChampion(r);
 					if (a === "breaks"){
 						fates.push(allNames[r] + " " + a + " " + allNames[q] + "\'s neck.");
