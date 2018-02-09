@@ -260,6 +260,7 @@ var misc =
 "finds Bishan Agrawal",
 "barrel rolls",
 "finds Dory",
+"sees Chen and hides under a desk",
 "finds Nemo"];
 
 var injury =
@@ -288,6 +289,7 @@ var injury =
 "gets devastating hiccups",
 "gets yellow fever",
 "gets forced into BEES",
+"gets forced into Fall",
 "gets roasted by Pannapara. Slam!",
 "unluckily trips despite the 1/100 chance",
 "gets an ulcer",
