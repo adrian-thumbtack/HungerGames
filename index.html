@@ -804,6 +804,9 @@
 						xDies(r);
 						summary.push(fates[fates.length-1]);
 					}
+					else if (a === "stream"){
+						fates.push(allNames[r] + " said racial slurs on a Twitch livestream and got roasted to death.")
+					}
 					else if (a === "unsafe dating"){
 						var lol = playerItems[r].indexOf("pack of condoms");
 						var lol2 = playerItems[q].indexOf("pack of condoms");
@@ -856,6 +859,7 @@
 
 		while (fates.length > 0){
 			par.appendChild(document.createTextNode(fates[0]));
+			par.appendChild(document.createElement("br"));
 			par.appendChild(document.createElement("br"));
 			for (var j=0; j<fates.length-1; j++){
 				fates[j] = fates[j+1];
@@ -1150,11 +1154,7 @@
 	}
 
 	function visibleStuff(){
-		//stats.style.visibility = "visible";
 		names.style.visibility = "visible";
-		//corn.style.visibility = "visible";
-		//day.style.visibility = "visible";
-		//cannon.style.visibility = "visible";
 		winner.style.visibility = "hidden";
 		finalSum.style.visibility = "hidden";
 
